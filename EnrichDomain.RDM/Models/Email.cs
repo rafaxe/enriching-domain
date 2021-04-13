@@ -7,7 +7,7 @@ namespace EnrichDomain.RDM.Models
         private const string MailDomain = "@gmail.com";
         private readonly string _email;
 
-        public Email(string mail)
+        private Email(string mail)
         {
             if (string.IsNullOrEmpty(mail))
                 throw new ArgumentNullException(mail);
@@ -16,7 +16,7 @@ namespace EnrichDomain.RDM.Models
             _email = mail;
         }
 
-        public static Email Of(string mail)
+        public static Email Create(string mail)
         {
             return new(mail);
         }

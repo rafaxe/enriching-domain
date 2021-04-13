@@ -27,7 +27,6 @@ namespace EnrichDomain.Test.TestAdm
         [DisplayName("The user after creation should be active")]
         public void ShouldBeActiveAfterCreation()
         {
-
             _mockRepository
                 .Setup(x => x.GetById(It.IsAny<int>()))
                 .Returns(UserTestHelper.CreateUser(1));

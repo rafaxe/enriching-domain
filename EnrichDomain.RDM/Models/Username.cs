@@ -7,7 +7,7 @@ namespace EnrichDomain.RDM.Models
         private const int MaxUsernameLength = 100;
         private readonly string _username;
 
-        public Username(string username)
+        private Username(string username)
         {
             if (string.IsNullOrEmpty(username))
                 throw new ArgumentNullException(username);
@@ -16,7 +16,7 @@ namespace EnrichDomain.RDM.Models
             _username = username;
         }
 
-        public static Username Of(string userName)
+        public static Username Create(string userName)
         {
             return new(userName);
         }
